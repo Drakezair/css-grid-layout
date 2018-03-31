@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Css Grid Layout</title>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Lobster" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	<style>
+		body {
+			background: #1f1f1f;
+		}
+		.container {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr) ;
+			grid-template-rows: 100px;
+			grid-gap: 10px;
+			width: 80%;
+			margin: 50px auto 50px auto ;
+			grid-auto-rows: 100px;
+		}
+
+		.titulo {
+			font-family: "Lobster", sans-serif;
+			color: white;
+			grid-column: 1 / -1;
+			text-align: center;
+		}
+
+		.button {
+			text-decoration: none;
+			font-family: "Pacifico", sans-serif;
+			color: white;
+			border-radius: 10px;
+			font-size: 100%;
+			text-align: center;
+			padding: 0 10px;
+			padding-top: 38px;
+			background: #4c3535;
+		}
+
+
+		.button:nth-of-type(13) {
+			grid-column: 1 / -1;
+		}
+
+ 		.button:hover {
+ 			background: #a03131;
+ 		}
+
+ 		@media screen and (max-width: 800px) {
+ 			.container {
+ 				grid-template-columns: repeat(2, 1fr);
+ 			}
+ 		}
+
+ 		@media screen and (max-width: 917px) {
+ 			.button:nth-of-type(9) {
+ 				padding-top: 25px;
+ 			}
+ 		}
+
+ 		@media screen and (max-width: 650px) {
+ 			.container{
+ 				grid-template-columns: 1fr;
+ 			}
+
+ 			.button:nth-of-type(9) {
+ 				padding-top: 38px;
+ 			}
+ 		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="titulo">CSS Grid Layout</h1>
+		<a href="./displays/index.html" class="button">Display</a>
+		<a href="./columnas/index.html" class="button">Columnas</a>
+		<a href="./filas/index.html" class="button">Filas</a>
+		<a href="./gap/index.html" class="button">Gap</a>
+		<a href="./funciones/index.html" class="button">Funciones</a>
+		<a href="./columns-size/index.html" class="button">Columns size</a>
+		<a href="./row-size/index.html" class="button">Row size</a>
+		<a href="./alinear-grid/index.html" class="button">Alineacion de grid</a>
+		<a href="./alinear-contenido/index.html" class="button">Alineacion de contenido</a>
+		<a href="./grid-implicito/index.html" class="button">Grid implicito</a>
+		<a href="./nombre-lineas/index.html" class="button">Nombre lineas</a>
+		<a href="./instagram-layout/index.html" class="button">Layout Instagram</a>
+		<a href="./pinterest-layout/index.html" class="button">Layout Pinterest</a>
+	</div>
+</body>
+</html>
